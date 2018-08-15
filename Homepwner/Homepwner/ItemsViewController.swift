@@ -60,9 +60,15 @@ class ItemsViewController: UITableViewController {
             preconditionFailure("Unexpected segue identifier")
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     // MARK: Actions
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
         if let index = itemStore.allItems.index(of: newItem) {
             let indexPath = IndexPath(row: index, section: 0)
@@ -70,13 +76,9 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", for: UIControlState.normal)
-            setEditing(true, animated: true)
-        }
+    //MARK: init
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 }

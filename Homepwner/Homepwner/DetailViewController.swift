@@ -8,22 +8,13 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: outlets and variables
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var dateField: UILabel!
     @IBOutlet weak var valueField: UITextField!
     @IBOutlet weak var serialField: UITextField!
-    
-    var item: Item!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        nameField.text = item.name
-        serialField.text = item.serialNumber
-        dateField.text = "\(dateFormatter.string(from: item.dateCreated))"
-        valueField.text = "$\(numberFormatter.string(from: NSNumber(value: item.valueInDollars)) ?? "0.00")"
-    }
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -39,4 +30,47 @@ class DetailViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
+    
+    // MARK: Actions
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    // MARK: Overrides
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        nameField.text = item.name
+        serialField.text = item.serialNumber
+        dateField.text = "\(dateFormatter.string(from: item.dateCreated))"
+        valueField.text = "\(numberFormatter.string(from: NSNumber(value: item.valueInDollars)) ?? "0.00")"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        item.name = nameField.text ?? ""
+        item.serialNumber = serialField.text
+        
+        if let valueText = valueField.text,
+            let value = numberFormatter.number(from: valueText) {
+            item.valueInDollars = value.intValue
+        } else {
+            item.valueInDollars = 0
+        }
+        
+        view.endEditing(true)
+    }
+    
+    // MARK: UITextFieldDelegate members
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
