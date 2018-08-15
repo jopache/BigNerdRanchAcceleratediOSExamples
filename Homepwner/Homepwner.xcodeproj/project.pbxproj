@@ -17,6 +17,7 @@
 		F5FF226621234AFE002622CD /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF226521234AFE002622CD /* ItemsViewController.swift */; };
 		F5FF226821234B98002622CD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF226721234B97002622CD /* Item.swift */; };
 		F5FF226A21234E2F002622CD /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF226921234E2F002622CD /* ItemStore.swift */; };
+		F5FF2270212458C7002622CD /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF226F212458C7002622CD /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F5FF226521234AFE002622CD /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		F5FF226721234B97002622CD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F5FF226921234E2F002622CD /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		F5FF226F212458C7002622CD /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				F5FF224321234A67002622CD /* Info.plist */,
 				F5FF226721234B97002622CD /* Item.swift */,
 				F5FF226921234E2F002622CD /* ItemStore.swift */,
+				F5FF226F212458C7002622CD /* ItemCell.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				F5FF226821234B98002622CD /* Item.swift in Sources */,
 				F5FF223A21234A66002622CD /* ViewController.swift in Sources */,
+				F5FF2270212458C7002622CD /* ItemCell.swift in Sources */,
 				F5FF226621234AFE002622CD /* ItemsViewController.swift in Sources */,
 				F5FF226A21234E2F002622CD /* ItemStore.swift in Sources */,
 				F5FF223821234A66002622CD /* AppDelegate.swift in Sources */,
