@@ -57,12 +57,12 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD1-JU-tbZ">
                                             <rect key="frame" x="16" y="11" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-yy-Zby">
-                                            <rect key="frame" x="16" y="44" width="35.5" height="17"/>
+                                            <rect key="frame" x="16" y="36" width="35.5" height="25"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -76,6 +76,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="pD1-JU-tbZ" firstAttribute="leading" secondItem="EFs-BR-YcQ" secondAttribute="leadingMargin" id="4ed-Ti-ktm"/>
+                                        <constraint firstItem="uxA-yy-Zby" firstAttribute="top" secondItem="pD1-JU-tbZ" secondAttribute="bottom" constant="4" id="7mS-6w-p2K"/>
                                         <constraint firstAttribute="trailing" secondItem="JOO-l9-X8W" secondAttribute="trailing" constant="16" id="GVS-Qs-EhR"/>
                                         <constraint firstItem="uxA-yy-Zby" firstAttribute="leading" secondItem="pD1-JU-tbZ" secondAttribute="leading" id="Iw0-zU-N26"/>
                                         <constraint firstAttribute="bottom" secondItem="uxA-yy-Zby" secondAttribute="bottom" constant="3.5" id="KsT-bV-KQt"/>
