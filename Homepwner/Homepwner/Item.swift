@@ -13,12 +13,14 @@ class Item: NSObject {
     var valueInDollars: Int
     var serialNumber: String?
     let dateCreated: Date
+    let itemKey: String
     
     init(name: String, serialNumber: String? = nil, valueInDollars: Int) {
         self.name = name
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
         
         super.init()
     }
@@ -46,12 +48,12 @@ class Item: NSObject {
         }
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "name") as! String
         dateCreated = aDecoder.decodeObject(forKey: "dateCreated") as! Date
         serialNumber = aDecoder.decodeObject(forKey: "serialNumber") as! String?
         valueInDollars = aDecoder.decodeInteger(forKey: "valueInDollars")
-        
+        itemKey = aDecoder.decodeObject(forKey: "itemKey") as! String
         super.init()
     }
 }
@@ -62,5 +64,6 @@ extension Item: NSCoding {
         aCoder.encode(dateCreated, forKey: "dateCreated")
         aCoder.encode(serialNumber, forKey: "serialNumber")
         aCoder.encode(valueInDollars, forKey: "valueInDollars")
+        aCoder.encode(itemKey, forKey: "itemKey")
     }
 }

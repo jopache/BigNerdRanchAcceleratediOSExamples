@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F51AB3B62125271D00A2E9BF /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51AB3B52125271D00A2E9BF /* ImageStore.swift */; };
 		F5FF223821234A66002622CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF223721234A66002622CD /* AppDelegate.swift */; };
 		F5FF223A21234A66002622CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF223921234A66002622CD /* ViewController.swift */; };
 		F5FF223D21234A66002622CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5FF223B21234A66002622CD /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F51AB3B52125271D00A2E9BF /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		F5FF223421234A66002622CD /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FF223721234A66002622CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5FF223921234A66002622CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F5FF226921234E2F002622CD /* ItemStore.swift */,
 				F5FF226F212458C7002622CD /* ItemCell.swift */,
 				F5FF227321249EC6002622CD /* DetailViewController.swift */,
+				F51AB3B52125271D00A2E9BF /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				F5FF226821234B98002622CD /* Item.swift in Sources */,
 				F5FF223A21234A66002622CD /* ViewController.swift in Sources */,
 				F5FF2270212458C7002622CD /* ItemCell.swift in Sources */,
+				F51AB3B62125271D00A2E9BF /* ImageStore.swift in Sources */,
 				F5FF226621234AFE002622CD /* ItemsViewController.swift in Sources */,
 				F5FF226A21234E2F002622CD /* ItemStore.swift in Sources */,
 				F5FF223821234A66002622CD /* AppDelegate.swift in Sources */,
@@ -453,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9GALU497J;
 				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9GALU497J;
 				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

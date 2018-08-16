@@ -12,7 +12,7 @@ class ItemsViewController: UITableViewController {
     
     // MARK: Instance Variables
     var itemStore: ItemStore!
-    
+    var imageStore: ImageStore!
     
     // MARK: Overridden methods
     override func tableView(_ tableView: UITableView,
@@ -24,6 +24,7 @@ class ItemsViewController: UITableViewController {
         if editingStyle == .delete {
             let item = itemStore.allItems[indexPath.row]
             itemStore.removeItem(item)
+            imageStore.deleteImage(forKey: item.itemKey)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -55,6 +56,7 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier")

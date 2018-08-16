@@ -153,11 +153,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-FQ-l6s">
-                                        <rect key="frame" x="0.0" y="114" width="345" height="422"/>
+                                        <rect key="frame" x="0.0" y="114" width="345" height="153"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Xt6-kF-u46">
+                                        <rect key="frame" x="0.0" y="275" width="345" height="261"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kB7-6p-dC8" firstAttribute="leading" secondItem="uMC-nQ-CR3" secondAttribute="leading" id="aBL-kA-ogg"/>
@@ -196,6 +199,7 @@
                     </view>
                     <connections>
                         <outlet property="dateField" destination="KxE-FQ-l6s" id="D2H-O8-Sgn"/>
+                        <outlet property="imageView" destination="Xt6-kF-u46" id="FIQ-ft-V73"/>
                         <outlet property="nameField" destination="J4v-zv-xpd" id="zi4-yc-nCs"/>
                         <outlet property="serialField" destination="oh6-iP-X1d" id="9Vt-fM-HVQ"/>
                         <outlet property="valueField" destination="EXY-wn-zRH" id="QQz-bf-T8v"/>
