@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1Y-Ys-MRF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mood Selection View Controller-->
+        <scene sceneID="Vh0-bu-lQJ">
+            <objects>
+                <viewController id="Y1Y-Ys-MRF" customClass="MoodSelectionViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EA8-BU-MaL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxe-6m-JJ5">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VEu-vt-hHY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-oN-SXg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="fHT-oN-SXg" secondAttribute="trailing" id="Jcw-qQ-jgQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="fHT-oN-SXg" secondAttribute="bottom" id="ifT-L6-4aQ"/>
+                                        <constraint firstItem="fHT-oN-SXg" firstAttribute="leading" secondItem="VEu-vt-hHY" secondAttribute="leading" id="ppF-H8-CqN"/>
+                                        <constraint firstItem="fHT-oN-SXg" firstAttribute="top" secondItem="VEu-vt-hHY" secondAttribute="top" id="vkn-dW-Iit"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="hP2-Wq-nws"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh2-gf-cnn">
+                                <rect key="frame" x="94" y="537" width="187.5" height="30"/>
+                                <state key="normal" title="Add Mood">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="cryingLightBlue"/>
+                        <constraints>
+                            <constraint firstItem="Lh2-gf-cnn" firstAttribute="centerX" secondItem="EA8-BU-MaL" secondAttribute="centerX" id="B1j-Ul-9B6"/>
+                            <constraint firstItem="oxe-6m-JJ5" firstAttribute="trailing" secondItem="Rn5-za-G5m" secondAttribute="trailing" id="MYD-4V-7ka"/>
+                            <constraint firstItem="Lh2-gf-cnn" firstAttribute="width" secondItem="EA8-BU-MaL" secondAttribute="width" multiplier="0.5" id="WBn-yp-jbE"/>
+                            <constraint firstItem="oxe-6m-JJ5" firstAttribute="leading" secondItem="Rn5-za-G5m" secondAttribute="leading" id="bA1-kV-7b9"/>
+                            <constraint firstItem="oxe-6m-JJ5" firstAttribute="top" secondItem="Lh2-gf-cnn" secondAttribute="bottom" constant="20" id="sXK-hW-Ni5"/>
+                            <constraint firstItem="oxe-6m-JJ5" firstAttribute="bottom" secondItem="Rn5-za-G5m" secondAttribute="bottom" id="zP0-zB-z90"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rn5-za-G5m"/>
+                    </view>
+                    <connections>
+                        <outlet property="addMoodButton" destination="Lh2-gf-cnn" id="DOy-Ym-H5Y"/>
+                        <outlet property="stackView" destination="fHT-oN-SXg" id="N64-vj-i45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkn-DM-awf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="cryingLightBlue">
+            <color red="0.23921568627450981" green="0.71372549019607845" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
