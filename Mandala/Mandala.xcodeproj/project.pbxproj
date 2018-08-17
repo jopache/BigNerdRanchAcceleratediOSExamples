@@ -18,6 +18,8 @@
 		F5CB90E92125D3980092EF14 /* UIImage+Moods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB90E82125D3980092EF14 /* UIImage+Moods.swift */; };
 		F5CB90EB2125D4020092EF14 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB90EA2125D4020092EF14 /* Mood.swift */; };
 		F5CB90ED2125D4120092EF14 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB90EC2125D4120092EF14 /* MoodEntry.swift */; };
+		F5E9EFEC2126192B00DE10F2 /* MoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9EFEB2126192B00DE10F2 /* MoodListViewController.swift */; };
+		F5E9EFEE21271E6F00DE10F2 /* MoodsConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9EFED21271E6F00DE10F2 /* MoodsConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		F5CB90E82125D3980092EF14 /* UIImage+Moods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Moods.swift"; sourceTree = "<group>"; };
 		F5CB90EA2125D4020092EF14 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		F5CB90EC2125D4120092EF14 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		F5E9EFEB2126192B00DE10F2 /* MoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodListViewController.swift; sourceTree = "<group>"; };
+		F5E9EFED21271E6F00DE10F2 /* MoodsConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				F5CB90E82125D3980092EF14 /* UIImage+Moods.swift */,
 				F5CB90EA2125D4020092EF14 /* Mood.swift */,
 				F5CB90EC2125D4120092EF14 /* MoodEntry.swift */,
+				F5E9EFEB2126192B00DE10F2 /* MoodListViewController.swift */,
+				F5E9EFED21271E6F00DE10F2 /* MoodsConfigurable.swift */,
 			);
 			path = Mandala;
 			sourceTree = "<group>";
@@ -269,9 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5CB90EB2125D4020092EF14 /* Mood.swift in Sources */,
+				F5E9EFEC2126192B00DE10F2 /* MoodListViewController.swift in Sources */,
 				F5CB90E92125D3980092EF14 /* UIImage+Moods.swift in Sources */,
 				F5CB90BB2125D28C0092EF14 /* MoodSelectionViewController.swift in Sources */,
 				F5CB90E72125D3230092EF14 /* UIColor+Moods.swift in Sources */,
+				F5E9EFEE21271E6F00DE10F2 /* MoodsConfigurable.swift in Sources */,
 				F5CB90B92125D28C0092EF14 /* AppDelegate.swift in Sources */,
 				F5CB90ED2125D4120092EF14 /* MoodEntry.swift in Sources */,
 			);

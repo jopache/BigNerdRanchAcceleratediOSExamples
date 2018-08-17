@@ -20,6 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFh-SC-z7h">
+                                <rect key="frame" x="0.0" y="20" width="375" height="517"/>
+                                <connections>
+                                    <segue destination="ABB-we-oCW" kind="embed" identifier="embedContainerViewController" id="VH9-rL-Rov"/>
+                                </connections>
+                            </containerView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxe-6m-JJ5">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VEu-vt-hHY">
@@ -47,14 +53,21 @@
                                 <state key="normal" title="Add Mood">
                                     <color key="titleColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoodTapped:" destination="Y1Y-Ys-MRF" eventType="touchUpInside" id="1ep-7c-QtD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="cryingLightBlue"/>
                         <constraints>
                             <constraint firstItem="Lh2-gf-cnn" firstAttribute="centerX" secondItem="EA8-BU-MaL" secondAttribute="centerX" id="B1j-Ul-9B6"/>
+                            <constraint firstItem="yFh-SC-z7h" firstAttribute="top" secondItem="Rn5-za-G5m" secondAttribute="top" id="I5v-hk-4yB"/>
                             <constraint firstItem="oxe-6m-JJ5" firstAttribute="trailing" secondItem="Rn5-za-G5m" secondAttribute="trailing" id="MYD-4V-7ka"/>
+                            <constraint firstItem="yFh-SC-z7h" firstAttribute="leading" secondItem="Rn5-za-G5m" secondAttribute="leading" id="Vl7-Xj-nxw"/>
                             <constraint firstItem="Lh2-gf-cnn" firstAttribute="width" secondItem="EA8-BU-MaL" secondAttribute="width" multiplier="0.5" id="WBn-yp-jbE"/>
                             <constraint firstItem="oxe-6m-JJ5" firstAttribute="leading" secondItem="Rn5-za-G5m" secondAttribute="leading" id="bA1-kV-7b9"/>
+                            <constraint firstItem="Lh2-gf-cnn" firstAttribute="top" secondItem="yFh-SC-z7h" secondAttribute="bottom" id="dZS-TX-kP8"/>
+                            <constraint firstItem="Rn5-za-G5m" firstAttribute="trailing" secondItem="yFh-SC-z7h" secondAttribute="trailing" id="hgT-d1-6qa"/>
                             <constraint firstItem="oxe-6m-JJ5" firstAttribute="top" secondItem="Lh2-gf-cnn" secondAttribute="bottom" constant="20" id="sXK-hW-Ni5"/>
                             <constraint firstItem="oxe-6m-JJ5" firstAttribute="bottom" secondItem="Rn5-za-G5m" secondAttribute="bottom" id="zP0-zB-z90"/>
                         </constraints>
@@ -68,6 +81,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkn-DM-awf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="125.4872563718141"/>
+        </scene>
+        <!--Mood List View Controller-->
+        <scene sceneID="D38-tc-2gR">
+            <objects>
+                <tableViewController id="ABB-we-oCW" customClass="MoodListViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a2g-TM-cH8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="twS-WP-eUb" detailTextLabel="X7O-E6-hzK" style="IBUITableViewCellStyleSubtitle" id="wYK-ii-lhF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wYK-ii-lhF" id="hGA-Ez-onf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="twS-WP-eUb">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X7O-E6-hzK">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ABB-we-oCW" id="pwk-Wp-3oY"/>
+                            <outlet property="delegate" destination="ABB-we-oCW" id="TFY-V9-JTE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6X4-P8-iT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="125"/>
         </scene>
     </scenes>
     <resources>

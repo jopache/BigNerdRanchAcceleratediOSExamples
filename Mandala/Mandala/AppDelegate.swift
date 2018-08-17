@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Mandala
-//
-//  Created by Jose Pacheco on 8/16/18.
-//  Copyright © 2018 Jose Pacheco. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

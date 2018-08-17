@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Mandala
-//
-//  Created by Jose Pacheco on 8/16/18.
-//  Copyright © 2018 Jose Pacheco. All rights reserved.
-//
-
 import UIKit
 
 class MoodSelectionViewController: UIViewController {
@@ -41,12 +33,7 @@ class MoodSelectionViewController: UIViewController {
         }
     }
     
-    @objc func moodSelectionChanged(_ sender: UIButton) {
-        guard let selectedIndex = moodButtons.index(of: sender) else {
-            preconditionFailure("Unable to find the tapped button")
-        }
-        currentMood = moods[selectedIndex]
-    }
+    var moodsConfigurable: MoodsConfigurable!
     
     var moodButtons: [UIButton] = [] {
         didSet {
@@ -64,6 +51,57 @@ class MoodSelectionViewController: UIViewController {
         addMoodButton.layer.cornerRadius = addMoodButton.bounds.height / 2
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "embedContainerViewController"?:
+            guard let moodsConfigurable = segue.destination as? MoodsConfigurable else {
+                preconditionFailure("Embedded view controller expected to conform to MoodsConfigurable")
+            }
+            self.moodsConfigurable = moodsConfigurable
+            segue.destination.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 160, right: 0)
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+    
+    // MARK: Actions
+    @objc func moodSelectionChanged(_ sender: UIButton) {
+        guard let selectedIndex = moodButtons.index(of: sender) else {
+            preconditionFailure("Unable to find the tapped button")
+        }
+        currentMood = moods[selectedIndex]
+    }
+    
+    @IBAction func addMoodTapped(_ sender: Any) {
+        guard let currentMood = currentMood else {
+            return }
+        let newMoodEntry = MoodEntry(mood: currentMood, timestamp: Date())
+        moodsConfigurable.add(newMoodEntry)
+    }
+    
 }
 
+
+//class Promise<T> {
+//
+//    var subscribers: [(T) -> Void] = []
+//
+//    func done(result: T) -> Void {
+//        subscribers.forEach(<#T##body: ((T) -> Void) throws -> Void##((T) -> Void) throws -> Void#>)
+//    }
+//
+//    func then(callback: (T) -> Void) {
+//
+//    }
+//}
+//
+//extension URLSession {
+//    func dataTaskAsync(with request: URLRequest) throws -> (data: Data, response: URLResponse, error: Error?) {
+//
+//        dataTask(with: request) {
+//
+//        }
+//        return (data: Data(), response: URLResponse(), error: nil)
+//    }
+//}
 

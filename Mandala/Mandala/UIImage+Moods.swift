@@ -1,7 +1,3 @@
-//
-//  Copyright © 2017 Big Nerd Ranch
-//
-
 import UIKit
 
 enum ImageResource: String {
